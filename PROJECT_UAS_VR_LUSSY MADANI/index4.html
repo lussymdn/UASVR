@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title> Virtual Reality Tour by LUSSY MADANI</title>
+    <style>
+        body {
+            font-family: Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: rgb(219, 59, 147);
+        }
+
+        h1 {
+            margin-top: 70px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 30px;
+            padding: 10px 20px;
+            font-size: 19px;
+            color: white;
+            background-color: rgb(79, 184, 236);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: rgb(88, 162, 246);
+        }
+
+        .content {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(70, 203, 215);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: rgb(57, 166, 196);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Welcome to Virtual Reality Tour by Lussy Madani</h1>
+    <button class="button" onclick="showContent('start')">Start</button>
+    <button class="button" onclick="showContent('guide')">How</button>
+    <button class="button" onclick="showContent('about')">About</button>
+
+    <div id="start" class="content">
+        <iframe src="virtual_tour.html"></iframe>
+        <a href="javascript:void(0)" class="back-button" onclick="hideContent()">Back</a>
+    </div>
+
+    <div id="guide" class="content">
+        <h2>Baca dan Pahami Petunjuk Penggunaan Virtual Tour ini !</h2>
+        <p>1. Klik menu "Start" untuk mulai masuk ke wisata virtual tour.</p>
+        <p>2. Klik tombol "VR" di sudut kanan bawah untuk memulai tur virtual dalam tampilan penuh.</p>
+        <p>3. Perhatikan baik-baik! Di tengah tampilan virtual, terdapat kursor berbentuk lingkaran hitam yang berfungsi sebagai titik navigasi dan pengganti kursor laptop untuk mengklik gambar lainnya.</p>
+        <p>4. Klik tombol "Back" yang untuk ke halaman utama.</p>
+        <a href="javascript:void(0)" class="back-button" onclick="hideContent()">Kembali</a>
+    </div>
+
+    <div id="about" class="content">
+        <h2>Tentang Wisata Virtual Tour</h2>
+        <p>Selamat datang di Virtual Tour Wisata Indonesia! Kami berharap tur virtual ini dapat meningkatkan pemahaman dan pengetahuan Anda tentang berbagai destinasi wisata di Indonesia, atau sekadar memuaskan rasa ingin tahu Anda mengenai tempat-tempat indah di negeri ini.</p>
+        <p>Dibuat oleh : Lussy Madani,NPM 2113025029, PTI 2021</p>
+        <a href="javascript:void(0)" class="back-button" onclick="hideContent()">Kembali</a>
+    </div>
+
+    <script>
+        function showContent(id) {
+            document.getElementById('start').style.display = 'none';
+            document.getElementById('guide').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function hideContent() {
+            document.getElementById('start').style.display = 'none';
+            document.getElementById('guide').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
